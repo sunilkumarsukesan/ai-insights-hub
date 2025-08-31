@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petabyte-Scale Cloud Storage Comparison | AI Insights Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <span class="text-xl font-bold gradient-text">AI Insights Hub</span>
+          </div>
+          
+          <div class="flex items-center space-x-6">
+            <a href="/" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">← Back to Home</a>
+            <div class="flex space-x-3">
+              <a href="https://wa.me/1234567890" target="_blank" class="bg-green-600 hover:bg-green-700 text-white p-2 rounded-lg transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.63z"/>
+                </svg>
+              </a>
+              <a href="mailto:contact@aiinsightshub.com" class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </a>
+              <a href="tel:+1234567890" class="bg-purple-600 hover:bg-purple-700 text-white p-2 rounded-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center mb-6">
+          <div class="flex items-center space-x-4">
+            <svg class="h-12 w-12 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+            </svg>
+            <svg class="h-12 w-12 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+            </svg>
+            <svg class="h-12 w-12 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"></path>
+            </svg>
+          </div>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+          Petabyte-Scale Storage
+          <span class="block text-blue-300">Comparison Guide</span>
+        </h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          A comprehensive side-by-side analysis of AWS, Azure, and Google Cloud storage solutions for 
+          long-term archives, real-time analytics, and high-performance computing workloads.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      
+      <!-- Cloud Providers Accordion -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Cloud Provider Comparison</h2>
+        
+        <!-- AWS Accordion -->
+        <div class="mb-4">
+          <button class="accordion-button w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 rounded-t-2xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-between" onclick="toggleAccordion('aws')">
+            <div class="flex items-center space-x-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+              </svg>
+              <div class="text-left">
+                <h3 class="text-2xl font-bold">Amazon Web Services</h3>
+                <p class="text-orange-100 text-sm">Amazon S3 with comprehensive storage classes</p>
+              </div>
+            </div>
+            <svg class="w-6 h-6 transform transition-transform duration-300" id="aws-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-white border-x-2 border-b-2 border-orange-200 rounded-b-2xl overflow-hidden" id="aws-content" style="max-height: 0;">
+            <div class="p-8">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                    </svg>
+                    Primary Storage
+                  </h4>
+                  <p class="text-gray-700 mb-6">Amazon S3 (object storage) with storage classes: Standard, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier Instant Retrieval (ms access), Glacier Flexible Retrieval (minutes or bulk 5–12h), and Glacier Deep Archive (≈12–48h).</p>
+                  
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Notable Features
+                  </h4>
+                  <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      11 9's durability, cross-region replication
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Object lock and lifecycle policies
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      S3 Intelligent-Tiering with auto-optimization
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      S3 Express One Zone for ultra-low latency
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                    Analytics Integration
+                  </h4>
+                  <p class="text-gray-700 mb-6">Serverless SQL via Amazon Athena; managed Spark/Presto on EMR; Redshift Spectrum for in-place queries; governance with Lake Formation/Glue.</p>
+                  
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                    Pricing Structure
+                  </h4>
+                  <p class="text-gray-700">Per-GB-month by class; request/operation charges; data transfer costs; minimum storage durations on IA/Glacier classes.</p>
+                  
+                  <div class="mt-6 p-4 bg-orange-50 rounded-lg">
+                    <h5 class="font-semibold text-orange-800 mb-2">Strengths for Scale</h5>
+                    <p class="text-orange-700 text-sm">Most mature object ecosystem with rich query-in-place options and extensive third-party integrations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Azure Accordion -->
+        <div class="mb-4">
+          <button class="accordion-button w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-t-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center justify-between" onclick="toggleAccordion('azure')">
+            <div class="flex items-center space-x-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"></path>
+              </svg>
+              <div class="text-left">
+                <h3 class="text-2xl font-bold">Microsoft Azure</h3>
+                <p class="text-blue-100 text-sm">Azure Blob Storage / ADLS Gen2 with hierarchical namespace</p>
+              </div>
+            </div>
+            <svg class="w-6 h-6 transform transition-transform duration-300" id="azure-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-white border-x-2 border-b-2 border-blue-200 rounded-b-2xl overflow-hidden" id="azure-content" style="max-height: 0;">
+            <div class="p-8">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                    </svg>
+                    Primary Storage
+                  </h4>
+                  <p class="text-gray-700 mb-6">Azure Blob Storage / Azure Data Lake Storage Gen2 (ADLS Gen2) with hierarchical namespace (HNS) for file-system semantics. Tiers: Hot, Cool, Cold (online), and Archive.</p>
+                  
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Notable Features
+                  </h4>
+                  <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Hierarchical namespace (HNS) for file-system semantics
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Deep Microsoft Entra ID integration
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      POSIX-like ACLs and RBAC
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Hot/Cool/Cold online tiers plus Archive
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                    Analytics Integration
+                  </h4>
+                  <p class="text-gray-700 mb-6">Synapse Analytics serverless SQL; Azure Databricks with Delta Lake; Fabric OneLake for unified analytics.</p>
+                  
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                    Pricing Structure
+                  </h4>
+                  <p class="text-gray-700">Per-GB-month by tier; operations priced per 10k transactions; data egress charges; rehydration costs for Archive.</p>
+                  
+                  <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                    <h5 class="font-semibold text-blue-800 mb-2">Strengths for Scale</h5>
+                    <p class="text-blue-700 text-sm">Enterprise identity/compliance integration with tight coupling to Microsoft data stack.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Cloud Accordion -->
+        <div class="mb-4">
+          <button class="accordion-button w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white p-6 rounded-t-2xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-between" onclick="toggleAccordion('gcp')">
+            <div class="flex items-center space-x-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+              </svg>
+              <div class="text-left">
+                <h3 class="text-2xl font-bold">Google Cloud</h3>
+                <p class="text-green-100 text-sm">Google Cloud Storage with unique Archive accessibility</p>
+              </div>
+            </div>
+            <svg class="w-6 h-6 transform transition-transform duration-300" id="gcp-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-white border-x-2 border-b-2 border-green-200 rounded-b-2xl overflow-hidden" id="gcp-content" style="max-height: 0;">
+            <div class="p-8">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                    </svg>
+                    Primary Storage
+                  </h4>
+                  <p class="text-gray-700 mb-6">Google Cloud Storage (GCS) with Standard, Nearline, Coldline, Archive, and Autoclass. Uniquely, GCS Archive is still millisecond-accessible (higher access costs, 365-day min).</p>
+                  
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Notable Features
+                  </h4>
+                  <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Archive tier with millisecond access
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Autoclass for automatic tiering
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Regional/dual-region/multi-region placement
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 text-emerald-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Strong integration with BigQuery ecosystem
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                    Analytics Integration
+                  </h4>
+                  <p class="text-gray-700 mb-6">BigQuery with external tables and BigLake; Dataproc and Dataflow; Dataplex Universal Catalog for governance.</p>
+                  
+                  <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                    Pricing Structure
+                  </h4>
+                  <p class="text-gray-700">Per-GB-month by class; Class A/B operations pricing; minimum storage durations; internet egress costs.</p>
+                  
+                  <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                    <h5 class="font-semibold text-green-800 mb-2">Strengths for Scale</h5>
+                    <p class="text-green-700 text-sm">Best-in-class serverless analytics with strong governance for multi-engine lakehouse patterns.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Use Case Scenarios Accordion -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Use Case Scenarios</h2>
+        
+        <!-- Long-term Archiving -->
+        <div class="mb-4">
+          <button class="accordion-button w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6 rounded-t-2xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-between" onclick="toggleAccordion('archiving')">
+            <div class="flex items-center space-x-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+              </svg>
+              <div class="text-left">
+                <h3 class="text-2xl font-bold">Long-term Archiving</h3>
+                <p class="text-purple-100 text-sm">Lowest $/TB for rarely accessed data</p>
+              </div>
+            </div>
+            <svg class="w-6 h-6 transform transition-transform duration-300" id="archiving-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-white border-x-2 border-b-2 border-purple-200 rounded-b-2xl overflow-hidden" id="archiving-content" style="max-height: 0;">
+            <div class="p-8">
+              <div class="space-y-6">
+                <div class="border-l-4 border-orange-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">AWS Recommendation</h4>
+                  <p class="text-gray-700 mb-2">S3 Glacier Deep Archive or Flexible Retrieval</p>
+                  <p class="text-sm text-gray-600">Excellent when already on S3 and can tolerate restore time</p>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">Azure Recommendation</h4>
+                  <p class="text-gray-700 mb-2">Archive tier in Blob/ADLS Gen2</p>
+                  <p class="text-sm text-gray-600">Strong for Azure-first analytics and HNS requirements</p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">GCP Recommendation</h4>
+                  <p class="text-gray-700 mb-2">Archive class with millisecond access</p>
+                  <p class="text-sm text-gray-600">Cold pricing with occasional fast reads capability</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-time Analytics -->
+        <div class="mb-4">
+          <button class="accordion-button w-full bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-t-2xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-between" onclick="toggleAccordion('analytics')">
+            <div class="flex items-center space-x-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              <div class="text-left">
+                <h3 class="text-2xl font-bold">Real-time Analytics</h3>
+                <p class="text-orange-100 text-sm">Ad-hoc analytics over data lakes without copying</p>
+              </div>
+            </div>
+            <svg class="w-6 h-6 transform transition-transform duration-300" id="analytics-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-white border-x-2 border-b-2 border-orange-200 rounded-b-2xl overflow-hidden" id="analytics-content" style="max-height: 0;">
+            <div class="p-8">
+              <div class="space-y-6">
+                <div class="border-l-4 border-orange-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">AWS Solution</h4>
+                  <p class="text-gray-700 mb-2">S3 + Athena/Redshift Spectrum + Glue</p>
+                  <p class="text-sm text-gray-600">Great for diverse formats and pay-per-query model</p>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">Azure Solution</h4>
+                  <p class="text-gray-700 mb-2">ADLS Gen2 + Synapse + Databricks</p>
+                  <p class="text-sm text-gray-600">Strong for Microsoft-centric analytics teams</p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">GCP Solution</h4>
+                  <p class="text-gray-700 mb-2">GCS + BigQuery + BigLake + Dataplex</p>
+                  <p class="text-sm text-gray-600">Excellent for SQL-first, serverless analytics at scale</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- High-Performance Computing -->
+        <div class="mb-4">
+          <button class="accordion-button w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-t-2xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-between" onclick="toggleAccordion('hpc')">
+            <div class="flex items-center space-x-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+              </svg>
+              <div class="text-left">
+                <h3 class="text-2xl font-bold">High-Performance Computing</h3>
+                <p class="text-indigo-100 text-sm">Bursty parallel IO and ultra-high throughput</p>
+              </div>
+            </div>
+            <svg class="w-6 h-6 transform transition-transform duration-300" id="hpc-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content bg-white border-x-2 border-b-2 border-indigo-200 rounded-b-2xl overflow-hidden" id="hpc-content" style="max-height: 0;">
+            <div class="p-8">
+              <div class="space-y-6">
+                <div class="border-l-4 border-orange-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">AWS Solution</h4>
+                  <p class="text-gray-700 mb-2">S3 + FSx for Lustre</p>
+                  <p class="text-sm text-gray-600">POSIX, sub-ms latencies, hundreds of GB/s throughput</p>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">Azure Solution</h4>
+                  <p class="text-gray-700 mb-2">Azure NetApp Files + HPC Cache</p>
+                  <p class="text-sm text-gray-600">Good for CAD/EDA, media, genomics on Azure compute</p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">GCP Solution</h4>
+                  <p class="text-gray-700 mb-2">Parallelstore + GCS</p>
+                  <p class="text-sm text-gray-600">Ultra-high-throughput NFS alongside BigQuery integration</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cost Optimization -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Cost Optimization Signals</h2>
+        
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Storage Class Selection</h3>
+              <p class="text-gray-600 text-sm">Choose storage classes based on access patterns. Consider minimum storage duration penalties on colder classes.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Operations Pricing</h3>
+              <p class="text-gray-600 text-sm">Monitor PUT/GET/LIST operations. AWS and GCP price per request; Azure charges per 10k operations.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Data Egress</h3>
+              <p class="text-gray-600 text-sm">Often the hidden cost driver. Check network pricing for your regions and plan data movement carefully.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Storage Tiers Table -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Storage Tiers At-a-Glance</h2>
+        
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Provider</th>
+                  <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Available Tiers</th>
+                  <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Key Notes</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900">AWS S3</td>
+                  <td class="px-6 py-4">
+                    <div class="flex flex-wrap gap-2">
+                      <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Standard</span>
+                      <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Intelligent-Tiering</span>
+                      <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Standard-IA</span>
+                      <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">One Zone-IA</span>
+                      <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Glacier Instant</span>
+                      <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Glacier Flexible</span>
+                      <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Glacier Deep Archive</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Choose based on access frequency and restore latency</td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900">Azure Blob/ADLS Gen2</td>
+                  <td class="px-6 py-4">
+                    <div class="flex flex-wrap gap-2">
+                      <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Hot</span>
+                      <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Cool</span>
+                      <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Cold</span>
+                      <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Archive</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Cold is online (cheaper than Cool), Archive requires rehydration</td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-900">Google Cloud Storage</td>
+                  <td class="px-6 py-4">
+                    <div class="flex flex-wrap gap-2">
+                      <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Standard</span>
+                      <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Nearline</span>
+                      <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Coldline</span>
+                      <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Archive</span>
+                      <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Autoclass</span>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Archive is millisecond-accessible (higher access costs, 365-day min)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Recommendations -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Recommendations</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Regulated Archives + Microsoft Integration</h3>
+            <p class="text-gray-700 mb-4">Azure ADLS Gen2 + Archive with Synapse/Fabric on top. Get HNS, AD-integrated ACLs, and smooth Power BI flows.</p>
+            <div class="flex items-center text-blue-600">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="font-medium">Best for: Enterprise governance</span>
+            </div>
+          </div>
+          
+          <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Massive Data Lake + Open Formats</h3>
+            <p class="text-gray-700 mb-4">GCP GCS + BigLake + BigQuery + Dataplex for unified lakehouse. Use Autoclass for varying access patterns.</p>
+            <div class="flex items-center text-green-600">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="font-medium">Best for: Analytics-first architecture</span>
+            </div>
+          </div>
+          
+          <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Broadest Ecosystem + Flexible Warehousing</h3>
+            <p class="text-gray-700 mb-4">AWS S3 with Athena/Redshift Spectrum, lifecycle to Glacier classes for aging data.</p>
+            <div class="flex items-center text-orange-600">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="font-medium">Best for: Multi-tool environments</span>
+            </div>
+          </div>
+          
+          <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">HPC + Simulation Workloads</h3>
+            <p class="text-gray-700 mb-4">AWS FSx for Lustre ↔ S3, Azure NetApp Files/HPC Cache, or GCP Parallelstore for high-throughput needs.</p>
+            <div class="flex items-center text-purple-600">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="font-medium">Best for: Compute-intensive workloads</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pro Tip -->
+      <div class="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-white mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-center">Pro Tip for Petabyte Designs</h2>
+        <p class="text-lg text-emerald-100 leading-relaxed mb-6 text-center max-w-4xl mx-auto">
+          Start with a <strong>multi-tier lifecycle</strong> per bucket/namespace: Hot → Warm → Archive. 
+          Wire your analytics engines to <strong>query data in place</strong> to avoid costly copies. 
+          Add governance/catalog early to keep costs predictable as your lake grows.
+        </p>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+          <h3 class="text-lg font-semibold mb-3">Need a Custom Analysis?</h3>
+          <p class="text-emerald-100 mb-4">
+            Share your regions, access patterns (hot %, monthly read GB), and analytics stack preferences 
+            for a concrete class/lifecycle plan with back-of-the-envelope cost modeling.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <a href="https://wa.me/1234567890" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition-colors inline-flex items-center space-x-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.63z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:contact@aiinsightshub.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-colors inline-flex items-center space-x-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div class="flex justify-center items-center space-x-3 mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <span class="text-white font-semibold">AI Insights Hub</span>
+          </div>
+          <p class="text-gray-400">
+            Enterprise cloud storage comparison and recommendations
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleAccordion(id) {
+        const content = document.getElementById(id + '-content');
+        const icon = document.getElementById(id + '-icon');
+        const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+        
+        // Close all other accordions
+        document.querySelectorAll('.accordion-content').forEach(el => {
+          if (el.id !== id + '-content') {
+            el.style.maxHeight = '0px';
+          }
+        });
+        
+        document.querySelectorAll('[id$="-icon"]').forEach(el => {
+          if (el.id !== id + '-icon') {
+            el.style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Toggle current accordion
+        if (isOpen) {
+          content.style.maxHeight = '0px';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      }
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Add scroll effect to navigation
+      window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 100) {
+          nav.classList.add('bg-white/98');
+          nav.classList.remove('bg-white/95');
+        } else {
+          nav.classList.add('bg-white/95');
+          nav.classList.remove('bg-white/98');
+        }
+      });
+
+      // Add smooth transitions for accordion content
+      document.querySelectorAll('.accordion-content').forEach(content => {
+        content.style.transition = 'max-height 0.3s ease-in-out';
+      });
+    </script>
+  </body>
+</html>
