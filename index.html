@@ -9,7 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       body { font-family: 'Inter', sans-serif; }
-      .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .gradient-text { 
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
       .floating { animation: float 6s ease-in-out infinite; }
       @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
       .pulse-glow { animation: pulse-glow 2s infinite; }
@@ -33,7 +38,7 @@
           <div class="hidden md:flex space-x-8">
             <a href="#home" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
             <a href="#ai-trends" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">AI Trends</a>
-            <a href="#articles" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Articles</a>
+            <a href="articles.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Articles</a>
             <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
           </div>
         </div>
