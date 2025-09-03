@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Engineering: A Practical Guide for IT Professionals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .gradient-text { 
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .section-divider {
+        border-top: 2px solid #e5e7eb;
+        margin: 2.5rem 0;
+      }
+      .visual-placeholder {
+        background: repeating-linear-gradient(135deg, #e0e7ff 0 10px, #f3f4f6 10px 20px);
+        color: #6366f1;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        text-align: center;
+        font-style: italic;
+        margin: 1.5rem 0;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <span class="text-xl font-bold gradient-text">AI Insights Hub</span>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="./index.html#home" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+            <a href="./index.html#articles" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Articles</a>
+            <a href="./index.html#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Article Header Banner -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-yellow-500 via-orange-500 to-pink-500">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center mb-6">
+          <div class="flex items-center space-x-4">
+            <svg class="h-12 w-12 text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 01-8 0M12 3v4m0 0a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4h1a4 4 0 014 4z" />
+            </svg>
+            <svg class="h-12 w-12 text-orange-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <svg class="h-12 w-12 text-pink-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+            </svg>
+          </div>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+          Prompt Engineering
+          <span class="block text-yellow-100">A Practical Guide for IT Professionals</span>
+        </h1>
+        <p class="text-xl text-yellow-50 max-w-3xl mx-auto leading-relaxed">
+          Learn how to craft effective prompts for LLMs like ChatGPT, Claude, and Gemini. Includes IT-specific examples, frameworks, and actionable tips for professionals.
+        </p>
+      </div>
+    </section>
+  <div class="mb-12"></div>
+  <main class="pt-0 pb-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="accordion-container">
+        <!-- Accordions will be injected here by JS -->
+      </div>
+    </main>
+
+    <script>
+      // Accordion data (headings and content as HTML)
+      const accordionData = [
+        {
+          heading: '1. Introduction',
+          content: `<p class="mb-4">Large Language Models (LLMs) like ChatGPT, Claude, and Gemini are rapidly transforming the way IT teams work. Whether it’s generating test cases, debugging code, writing documentation, or brainstorming ideas, the <strong>quality of the AI’s response depends on your prompt</strong>.</p>
+        <p class="mb-4">Think of it like this: if the AI is a powerful computer, your <strong>prompt is the command line input</strong>. The more precise your command, the more useful the output.</p>
+        <div class="visual-placeholder">[Visual placeholder: Terminal prompt analogy – “&gt; vague command → messy output” vs. “&gt; structured command → clean output”]</div>`
+        },
+        {
+          heading: '2. What is a Prompt and Why is it Important?',
+          content: `<p class="mb-4">A <strong>prompt</strong> is the text instruction you give to the AI. In IT, this can mean:</p>
+        <ul class="list-disc list-inside mb-6 text-gray-700 space-y-3">
+          <li>Asking the AI to generate <strong>Selenium code</strong>.</li>
+          <li>Explaining a <strong>DevOps pipeline concept</strong>.</li>
+          <li>Summarizing <strong>error logs</strong>.</li>
+          <li>Creating <strong>SQL queries</strong>.</li>
+        </ul>
+        <p class="mb-3 font-semibold">Example:</p>
+        <ul class="mb-6 text-gray-700 space-y-3">
+          <li><span class="font-bold">Prompt:</span> <em>“Write a Selenium WebDriver script.”</em><br><span class="ml-6 font-bold">Output:</span> Basic code, but missing details.</li>
+          <li><span class="font-bold">Prompt:</span> <em>“Write a Selenium WebDriver script in Java using TestNG that logs into Gmail, waits for the inbox to load, and takes a screenshot. Use Page Object Model.”</em><br><span class="ml-6 font-bold">Output:</span> Detailed, structured code with good practices.</li>
+        </ul>
+        <div class="visual-placeholder mt-6">[Visual placeholder: Side-by-side code outputs: vague vs. structured]</div>`
+        },
+        {
+          heading: '3. How Prompt Engineering Works (Behind the Scenes)',
+          content: `<p class="mb-4">Understanding why prompts matter requires a quick look under the hood:</p>
+        <ul class="list-disc list-inside mb-6 text-gray-700 space-y-3">
+          <li><strong>Tokens</strong>: In LLMs, text is split into tokens. For example, <em>“automation”</em> → <em>[auto] [mation]</em>. The AI processes and predicts tokens.</li>
+          <li><strong>Transformers</strong>: Models like GPT use transformers to understand relationships between tokens. That’s why <em>“Test”</em> followed by <em>“Automation”</em> is understood differently than <em>“Driving”</em> followed by <em>“Test”</em>.</li>
+          <li><strong>Prompt Sensitivity</strong>: <span class="font-semibold">Small changes matter.</span>
+            <ul class="ml-6 space-y-2">
+              <li><span class="font-bold">Vague:</span> <em>“Explain TestNG framework.”</em> <span class="text-gray-500">→ Generic explanation.</span></li>
+              <li><span class="font-bold">Structured:</span> <em>“Explain TestNG annotations in Java with examples for @BeforeTest, @AfterTest, and @Test.”</em> <span class="text-gray-500">→ Focused technical answer.</span></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="visual-placeholder mt-6">[Visual placeholder: Flow diagram: Prompt → Tokenization → Transformer layers → Output]</div>`
+        },
+        {
+          heading: '4. Vague vs. Structured Prompts (IT Examples)',
+          content: `<p class="mb-4"><span class="font-bold">Bad prompt:</span> <em>“Explain API testing.”</em><br><span class="ml-6 text-gray-500">AI may give a broad textbook definition.</span></p>
+        <p class="mb-4"><span class="font-bold">Better prompt:</span> <em>“Explain API testing in software QA. Include tools like Postman and REST Assured, common HTTP methods, and one real-world example of validating a login API.”</em><br><span class="ml-6 text-gray-500">AI gives practical, industry-ready content.</span></p>
+        <p class="mb-4 font-semibold">Another example:</p>
+        <ul class="mb-6 text-gray-700 space-y-3">
+          <li><span class="font-bold">Vague:</span> <em>“Fix my code.”</em></li>
+          <li><span class="font-bold">Structured:</span> <em>“Here’s my Python code snippet for connecting to MySQL. I’m getting an authentication error. Suggest corrections and explain why.”</em></li>
+        </ul>
+        <div class="visual-placeholder mt-6">[Visual placeholder: Two prompts + AI answers in a split-screen]</div>`
+        },
+        {
+          heading: '5. Frameworks for Structuring Prompts',
+          content: `<p class="mb-4">One simple but powerful structure is <strong>ICEPOT</strong>:</p>
+        <ul class="list-disc list-inside mb-6 text-gray-700 space-y-3">
+          <li><strong>I – Instruction</strong>: <span class="font-semibold">What do you want?</span></li>
+          <li><strong>C – Context</strong>: <span class="font-semibold">Background info.</span></li>
+          <li><strong>E – Examples</strong>: <span class="font-semibold">Show input/output if needed.</span></li>
+          <li><strong>P – Persona</strong>: <span class="font-semibold">Tell AI who to act as.</span></li>
+          <li><strong>O – Output</strong>: <span class="font-semibold">Define the format.</span></li>
+          <li><strong>T – Tone</strong>: <span class="font-semibold">Professional, casual, detailed, etc.</span></li>
+        </ul>
+        <p class="mb-3 font-semibold">Example in QA:</p>
+        <p class="mb-6">"<span class="font-bold">Act as a QA lead.</span> Generate 5 test cases for a login page with username and password fields. Provide input, steps, expected result in tabular format. Keep tone professional."</p>
+        <div class="visual-placeholder mt-6">[Visual placeholder: ICEPOT pyramid diagram with arrows]</div>`
+        },
+        {
+          heading: '6. Advanced Prompt Engineering Techniques',
+          content: `<ul class="list-disc list-inside mb-4 text-gray-700">
+          <li class="mb-4"><strong>Few-shot prompting</strong><br><span class="font-semibold">Example:</span> <em>“Here are 2 examples of JUnit test cases. Write 3 more for edge cases.”</em></li>
+          <li class="mb-4"><strong>Chain-of-thought prompting</strong><br><span class="font-semibold">Example:</span> <em>“Explain step by step how to debug a failing Selenium script when the element is not clickable.”</em></li>
+          <li class="mb-4"><strong>Role prompting</strong><br><span class="font-semibold">Example:</span> <em>“You are a DevOps trainer. Explain CI/CD pipelines in simple terms for beginners.”</em></li>
+          <li class="mb-4"><strong>Refinement loops</strong><br><span class="font-semibold">Example:</span> Instead of <em>“Write a full Dockerfile for a Node.js app with best practices”</em>, first ask: <em>“What should I include in a Dockerfile for Node.js?”</em> Then refine: <em>“Now write the optimized Dockerfile with multi-stage builds.”</em></li>
+        </ul>
+        <div class="visual-placeholder mt-6">[Visual placeholder: Flow diagram – Big task → smaller prompts → refined output]</div>`
+        },
+        {
+          heading: '7. Tips for Effective Prompting (for IT Use Cases)',
+          content: `<ol class="list-decimal list-inside mb-4 text-gray-700">
+          <li class="mb-5">Be <strong>specific</strong>: Add tools, languages, or frameworks.
+            <ul class="ml-6 space-y-2">
+              <li><span class="font-bold">Bad:</span> <em>“Write a script.”</em></li>
+              <li><span class="font-bold">Good:</span> <em>“Write a Python script using Pandas to calculate average salary from a CSV file.”</em></li>
+            </ul>
+          </li>
+          <li class="mb-5">Define <strong>audience</strong>: Beginner vs. expert.
+            <ul class="ml-6 space-y-2">
+              <li><em>“Explain Git branching strategies for beginners with diagrams.”</em></li>
+            </ul>
+          </li>
+          <li class="mb-5">Use <strong>output formats</strong>:
+            <ul class="ml-6 space-y-2">
+              <li><em>“Summarize this error log in bullet points.”</em></li>
+              <li><em>“Generate test cases in table format.”</em></li>
+            </ul>
+          </li>
+          <li class="mb-5">Experiment and iterate:
+            <ul class="ml-6 space-y-2">
+              <li>Start broad, refine with follow-ups.</li>
+            </ul>
+          </li>
+          <li class="mb-5">Leverage <strong>persona</strong>:
+            <ul class="ml-6 space-y-2">
+              <li><em>“Act as a senior Salesforce admin. Explain how to set field-level security.”</em></li>
+            </ul>
+          </li>
+        </ol>
+        <div class="visual-placeholder mt-6">[Visual placeholder: Checklist graphic with IT-flavored tips]</div>`
+        },
+        {
+          heading: '8. Conclusion',
+          content: `<p class="mb-4">Prompt Engineering is a <strong>practical skill</strong> for IT professionals. Whether you’re a fresher writing your first Selenium script, or a senior architect designing pipelines, good prompting makes AI a reliable partner.</p>
+        <p class="mb-4">The future of IT isn’t about replacing humans with AI—it’s about humans who know how to <strong>ask the right questions</strong>.</p>
+        <div class="visual-placeholder">[Visual placeholder: Quote – “The best coders of tomorrow are the best prompters today.”]</div>`
+        }
+      ];
+
+      // Render accordions
+      const container = document.getElementById('accordion-container');
+      accordionData.forEach((item, idx) => {
+        const wrapper = document.createElement('div');
+  wrapper.className = 'mb-6 border border-gray-200 rounded-xl bg-white shadow-lg transition-shadow duration-300';
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+  btn.className = 'w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-left text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-t-xl transition-all duration-300 hover:bg-blue-50 active:bg-blue-100 group';
+  btn.innerHTML = `<span>${item.heading}</span><svg class="w-5 h-5 ml-2 transition-transform duration-300 ease-in-out group-hover:scale-125" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+
+  const content = document.createElement('div');
+  content.className = 'px-6 pb-6 pt-2 text-gray-700 accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out';
+  content.innerHTML = item.content;
+
+        btn.addEventListener('click', () => {
+          const isOpen = content.classList.contains('open');
+          // Collapse all
+          document.querySelectorAll('#accordion-container .accordion-content').forEach(el => {
+            el.classList.remove('open');
+            el.style.maxHeight = '0px';
+            el.style.opacity = '0';
+            el.style.boxShadow = '';
+          });
+          document.querySelectorAll('#accordion-container button svg').forEach(svg => svg.classList.remove('rotate-180'));
+          // Expand if not open
+          if (!isOpen) {
+            content.classList.add('open');
+            content.style.maxHeight = content.scrollHeight + 32 + 'px'; // 32px for padding
+            content.style.opacity = '1';
+            content.style.boxShadow = '0 8px 32px 0 rgba(60,60,60,0.10)';
+            btn.querySelector('svg').classList.add('rotate-180');
+          }
+        });
+        btn.querySelector('svg').classList.add('transition-transform', 'duration-300');
+        // On transition end, if not open, set maxHeight to 0
+        content.addEventListener('transitionend', () => {
+          if (!content.classList.contains('open')) {
+            content.style.maxHeight = '0px';
+          }
+        });
+
+        wrapper.appendChild(btn);
+        wrapper.appendChild(content);
+        container.appendChild(wrapper);
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 mt-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div class="flex justify-center items-center space-x-3 mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <span class="text-white font-semibold">AI Insights Hub</span>
+          </div>
+          <p class="text-gray-400">
+            Practical AI guides for IT professionals
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
